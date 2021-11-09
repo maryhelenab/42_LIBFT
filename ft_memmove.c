@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 21:41:19 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/09 22:26:28 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/11/09 22:36:18 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void *memmove(void *dst, const void *src, size_t len)
 	unsigned char *original;
 
 	while (len--)
-		original[len] = ((unsigned char *)src [len];
-		((unsigned char *)dst)[len] = original[len];
-	return (dst);	
+		original[len] = ((unsigned char *)src)[len];
+	((unsigned char *)dst)[len] = original[len];
+	return (dst);
 }
