@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:06:50 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/09 22:29:25 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/11/10 21:54:53 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <string.h>
 
 int		ft_isalpha(int a);
 int		ft_isdigit(int a);

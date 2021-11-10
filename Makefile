@@ -6,7 +6,7 @@
 #    By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 19:22:30 by malbuque          #+#    #+#              #
-#    Updated: 2021/11/10 20:30:42 by malbuque         ###   ########.fr        #
+#    Updated: 2021/11/10 21:56:38 by malbuque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ all: $(NAME)
 $(NAME): $(OBJS)
 		ar rcs $(NAME) $(OBJS)
 
-clean: $(RM) $(OBJS)
+clean: 
+	$(RM) $(OBJS)
 
 fclean: clean
 		$(RM) $(NAME)
