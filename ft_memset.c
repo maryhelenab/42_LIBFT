@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 21:09:41 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/10 19:58:53 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/11/11 19:30:55 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	i = 0;
 	while (i < len)
+	{
 		((unsigned char *)b)[i] = (unsigned char)c;
+		i++;
+	}
 	return (b);
 }
