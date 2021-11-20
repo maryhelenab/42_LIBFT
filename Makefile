@@ -6,7 +6,7 @@
 #    By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 19:22:30 by malbuque          #+#    #+#              #
-#    Updated: 2021/11/20 00:32:21 by malbuque         ###   ########.fr        #
+#    Updated: 2021/11/20 11:16:04 by malbuque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,16 +35,16 @@ SRCS =		ft_isalpha.c\
 			ft_atoi.c\
 			ft_calloc.c\
 			ft_strdup.c\
-			#ft_substr.c\
+			ft_substr.c#\
 			ft_strjoin.c\
 			ft_strtrim.c\
 			ft_split.c\
 			ft_itoa.c\
-			ft_strmapi.c\#
+			ft_strmapi.c\
 			ft_putchar_fd.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
-			ft_putnbr_fd.c
+			ft_putnbr_fd.c#
 			
 OBJS = 		$(SRCS:.c=.o)
 

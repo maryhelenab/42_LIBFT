@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 20:49:23 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/16 21:59:23 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/11/20 12:04:27 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char) c)
 			return ((char *)s + i);
 		i++;
 	}
