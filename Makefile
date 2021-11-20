@@ -6,7 +6,7 @@
 #    By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 19:22:30 by malbuque          #+#    #+#              #
-#    Updated: 2021/11/20 11:16:04 by malbuque         ###   ########.fr        #
+#    Updated: 2021/11/20 17:58:56 by malbuque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,9 @@ SRCS =		ft_isalpha.c\
 			ft_atoi.c\
 			ft_calloc.c\
 			ft_strdup.c\
-			ft_substr.c#\
+			ft_substr.c\
 			ft_strjoin.c\
-			ft_strtrim.c\
+			ft_strtrim.c#\
 			ft_split.c\
 			ft_itoa.c\
 			ft_strmapi.c\
