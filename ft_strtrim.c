@@ -6,45 +6,45 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:44:59 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/20 19:14:34 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/11/23 21:28:21 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
+static int	ft_index(char c, const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*dest;
-	size_t	s1_len;
 	size_t	i;
-	size_t	j;
+	size_t	s;
+	size_t	e;
+	char	*dest;
 
-	i = 0;
-	if (!s1 || !set)
+	s = 0;
+	while (s1[s] && ft_index(s1[s], set))
+		s++;
+	e = ft_strlen(s1);
+	while (e > s && ft_index(s1[e - 1], set))
+		e--;
+	dest = (char *)malloc(sizeof(*s1) * (e - s +1));
+	if (!dest)
 		return (0);
-	s1_len = ft_strlen(s1);
-	dest = malloc((s1_len + 1) * sizeof(char));
-	while (s1[i] && i < s1_len)
-	{
-		j = 0;
-		if (s1[i] == set[j])
-		{
-			while (i + j < s1_len && s1[i + j] == set[j])
-			{	
-				if (set[j + 1] == 0)
-					return ((char *)&s1[i]);
-				j++;
-			}
-		}
-		i++;
-	}
+	i = 0;
+	while (s < e)
+		dest[i++] = s1[s++];
+	dest[i] = '\0';
 	return (dest);
 }
-
-/*int main()
-{
-	char *s = ft_strtrim("   xxxtripouille", " x");
-	printf("teste1: %s", s);
-	return (0);
-}*/

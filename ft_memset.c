@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 21:09:41 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/11 19:30:55 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/11/21 12:16:52 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,19 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
+
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	tab[100];
+	memset (tab, 0, 100);
+
+	printf("Teste    1: %s\n", ft_memset(tab, 'A', 0));
+	printf("Original 1: %s\n", memset(tab, 'A', 0));
+	printf("Teste    2: %s\n", ft_memset(tab, 'A', 42));
+	printf("Original 2: %s\n", memset(tab, 'A', 42));
+	printf("Teste    3: %s\n", ft_memset(tab, 'y', 10));
+	printf("Original 3: %s\n", memset(tab, 'y', 10));
+	return (0);
+}*/

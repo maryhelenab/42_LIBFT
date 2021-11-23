@@ -6,7 +6,7 @@
 #    By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 19:22:30 by malbuque          #+#    #+#              #
-#    Updated: 2021/11/20 17:58:56 by malbuque         ###   ########.fr        #
+#    Updated: 2021/11/23 21:59:31 by malbuque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,8 @@ SRCS =		ft_isalpha.c\
 			ft_strdup.c\
 			ft_substr.c\
 			ft_strjoin.c\
-			ft_strtrim.c#\
-			ft_split.c\
+			ft_strtrim.c\
+			ft_split.c#\
 			ft_itoa.c\
 			ft_strmapi.c\
 			ft_putchar_fd.c\
@@ -55,7 +55,7 @@ RM = 		rm -f
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ar rc $(NAME) $(OBJS)
+	@ars rc $(NAME) $(OBJS)
 
 clean: 
 	$(RM) $(OBJS)

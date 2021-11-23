@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 21:38:27 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/23 21:20:44 by malbuque         ###   ########.fr       */
+/*   Created: 2021/11/23 21:26:27 by malbuque          #+#    #+#             */
+/*   Updated: 2021/11/23 21:26:53 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	ft_memset(s, 0, n);
+	
 }
-

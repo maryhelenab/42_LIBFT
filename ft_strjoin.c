@@ -6,12 +6,12 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 12:59:19 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/20 16:59:38 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/11/21 16:37:17 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
