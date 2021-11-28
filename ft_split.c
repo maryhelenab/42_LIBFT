@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 21:26:27 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/28 14:58:35 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/11/28 18:36:13 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,28 @@ size_t	len_new(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	while (s[i])
+	while (*s)
 	{	
-		if (s[i] == c)
+		if (s[i] != c && !i)
+		{
 			j++;
-		i++;
+			i = 1;
+		}
+		else if (*s == c)
+			i = 0;
+		s++;
 	}
-	return ((ft_strlen(s) - j) + 1);
+	return (j + 1);
 }
 
-char	*ft_getsplit(char const *s, char c, size_t start)
+char	*ft_getsplit(char const *s, char c, size_t i)
 {
-	size_t	end;
+	size_t	e;
 
-	end = start;
-	while (s[end] != c && !s[end])
-		end++;
-	return (ft_substr(s, (unsigned int) start, (end - start)));
+	e = i;
+	while (s[e] != c && s[e] != 0)
+		e++;
+	return (ft_substr(s, (unsigned int) i, (e - i)));
 }
 
 char	**ft_split(char const *s, char c)
@@ -46,12 +51,12 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	dest = (char **)malloc(sizeof(*s) * len_new(s, c));
+	dest = malloc(sizeof(char *) * len_new(s, c));
 	if (!dest)
 		return (0);
 	i = 0;
 	j = 0;
-	while (!s[i])
+	while (s[i])
 	{
 		if (s[i] != c)
 		{
@@ -61,15 +66,20 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	dest[j] = "\0";
+	dest[j] = 0;
 	return (dest);
-	free (dest);
 }
- /*#include <stdio.h>
+
+/*#include <stdio.h>
  int main()
  {
-	 char **tab = "  tripouille  42  ";
+	 //char *str = "JAN,,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NOV,DEC";
+	 //char c =  ',';
+	 
+	 char *str = "  tripouille  42  ";
 	 char c =  ' ';
-	 printf("Teste: %s\n", ft_split(tab, c));
+	 
+	 printf("len: %zu\n", len_new(str,c));
+	 printf("Teste: %s\n", *ft_split(str, c));
 	 return(0);
  }*/
