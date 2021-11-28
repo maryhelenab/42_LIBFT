@@ -6,7 +6,7 @@
 #    By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 19:22:30 by malbuque          #+#    #+#              #
-#    Updated: 2021/11/23 21:59:31 by malbuque         ###   ########.fr        #
+#    Updated: 2021/11/28 14:03:26 by malbuque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,16 +46,16 @@ SRCS =		ft_isalpha.c\
 			ft_putendl_fd.c\
 			ft_putnbr_fd.c#
 			
-OBJS = 		$(SRCS:.c=.o)
+OBJS =		$(SRCS:.c=.o)
 
-CC = 		gcc
+CC =		gcc
 CFLAGS =	-Wall -Wextra -Werror -I.
-RM = 		rm -f
+RM =		rm -f
 
-all: $(NAME)
+all:	$(NAME)
 
 $(NAME): $(OBJS)
-	@ars rc $(NAME) $(OBJS)
+	@ar rc $(NAME) $(OBJS)
 
 clean: 
 	$(RM) $(OBJS)

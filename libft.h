@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:06:50 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/23 21:28:44 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/11/28 13:44:13 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,4 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 
-#endif 
+#endif
