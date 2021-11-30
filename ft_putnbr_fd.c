@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/28 18:30:14 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/30 22:37:52 by malbuque         ###   ########.fr       */
+/*   Created: 2021/11/30 23:20:48 by malbuque          #+#    #+#             */
+/*   Updated: 2021/11/30 23:31:44 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	char	*dest;
+	long int	nb;
+	char		c;
 
-	if (!s || !f)
-		return (0);
-	dest = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (!dest)
-		return (NULL);
-	i = 0;
-	while (s[i])
+	if (fd < 0)
+		return ;
+	nb = (long int)n;
+	if (n < 0)
 	{
-		dest[i] = f(i, s[i]);
-		i++;
+		write(fd, "-", 1);
+		nb *= -1;
 	}
-	dest[i] = 0;
-	return (dest);
+	if (nb >= 10)
+		ft_putnbr_fd((nb / 10), fd);
+	c = nb - ((nb / 10) * 10) + 48;
+	write(fd, &c, 1);
 }
