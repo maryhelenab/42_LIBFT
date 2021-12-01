@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 19:06:50 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/30 23:52:26 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/12/01 20:56:21 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <string.h>
 
-typedef struct s_list
+typedef struct s_list // Cria uma struct para armazenar um grupo de váriaveis.
 {
 	void			*content;
 	struct s_list	*next;
@@ -58,5 +58,6 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
