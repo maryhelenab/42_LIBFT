@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 21:42:10 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/16 20:18:34 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/12/04 18:03:52 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 	{
 		i = 0;
 		while (src[i] != '\0' && i < (n - 1))
-		{		
+		{
 			dst[i] = src[i];
 			i++;
 		}

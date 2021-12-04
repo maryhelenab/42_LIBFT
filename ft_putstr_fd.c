@@ -6,14 +6,14 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 23:03:53 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/30 23:31:14 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/12/04 18:03:32 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
-{	
+{
 	if (s && fd >= 0)
 	{
 		while (*s)

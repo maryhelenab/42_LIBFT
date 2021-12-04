@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:44:59 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/23 21:28:21 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/12/04 18:01:02 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	e;
 	char	*dest;
 
+	if (!s1 || !set)
+		return (0);
 	s = 0;
 	while (s1[s] && ft_index(s1[s], set))
 		s++;

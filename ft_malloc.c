@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_malloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 20:16:20 by malbuque          #+#    #+#             */
-/*   Updated: 2021/12/04 18:04:15 by malbuque         ###   ########.fr       */
+/*   Created: 2021/12/04 15:51:16 by malbuque          #+#    #+#             */
+/*   Updated: 2021/12/04 15:58:30 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_tolower(int c)
+int	ft_malloc(void *str, int len, size_t size)
 {
-	if (c >= 'A' && c <= 'Z')
-		c = c + ('a' - 'A');
-	return (c);
+	str = malloc(len * size);
+	if (!str)
+		return (0);
+	return (1);
 }

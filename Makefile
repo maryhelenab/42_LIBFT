@@ -6,7 +6,7 @@
 #    By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/10 19:22:30 by malbuque          #+#    #+#              #
-#    Updated: 2021/11/30 23:46:45 by malbuque         ###   ########.fr        #
+#    Updated: 2021/12/04 17:12:42 by malbuque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS =		ft_isalpha.c\
 			ft_strchr.c\
 			ft_strrchr.c\
 			ft_strncmp.c\
+			ft_malloc.c\
 			ft_memchr.c\
 			ft_memcmp.c\
 			ft_strnstr.c\
@@ -47,7 +48,7 @@ SRCS =		ft_isalpha.c\
 			ft_putendl_fd.c\
 			ft_putnbr_fd.c
 
-OBJS =		$(SRCS:.c=.o)
+OBJS =	$(SRCS:.c=.o)
 
 BONUS_SRCS = 	ft_lstnew.c\
 				ft_lstadd_front.c\
@@ -58,7 +59,7 @@ BONUS_SRCS = 	ft_lstnew.c\
 			 	ft_lstclear.c\
 			 	ft_lstiter.c\
 			 	ft_lstmap.c
-			
+
 BONUS_OBJS 	= $(BONUS_SRCS:.c=.o)
 
 CC =		gcc
@@ -70,13 +71,13 @@ all:	$(NAME)
 $(NAME): $(OBJS)
 	@ar rc $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(BONUS_OBJS) 
+bonus: $(OBJS) $(BONUS_OBJS)
 		ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
 
-clean: 
-	$(RM) $(OBJS)
+clean:
+	$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean:	clean
-		$(RM) $(NAME)
+			$(RM) $(NAME)
 
 re:fclean all

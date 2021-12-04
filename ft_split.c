@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 21:26:27 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/28 18:36:13 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/12/04 18:03:35 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	len_new(char const *s, char c)
 	i = 0;
 	j = 0;
 	while (*s)
-	{	
+	{
 		if (s[i] != c && !i)
 		{
 			j++;
@@ -75,10 +75,10 @@ char	**ft_split(char const *s, char c)
  {
 	 //char *str = "JAN,,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NOV,DEC";
 	 //char c =  ',';
-	 
+
 	 char *str = "  tripouille  42  ";
 	 char c =  ' ';
-	 
+
 	 printf("len: %zu\n", len_new(str,c));
 	 printf("Teste: %s\n", *ft_split(str, c));
 	 return(0);

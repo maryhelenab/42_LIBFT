@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 20:16:20 by malbuque          #+#    #+#             */
-/*   Updated: 2021/12/04 18:04:15 by malbuque         ###   ########.fr       */
+/*   Created: 2021/12/03 22:49:14 by malbuque          #+#    #+#             */
+/*   Updated: 2021/12/04 16:21:13 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (c >= 'A' && c <= 'Z')
-		c = c + ('a' - 'A');
-	return (c);
+	if (lst)
+		while (lst->next)
+			lst = lst->next;
+	return (lst);
 }

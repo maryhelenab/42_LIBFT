@@ -6,7 +6,7 @@
 /*   By: malbuque <malbuque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/28 16:49:17 by malbuque          #+#    #+#             */
-/*   Updated: 2021/11/28 18:26:23 by malbuque         ###   ########.fr       */
+/*   Updated: 2021/12/04 18:03:01 by malbuque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_itoa(int num)
 int	main(void)
 {
 	int n = (-1);
-	
+
 	printf("teste: %zu\n", ft_len(n));
 	printf("teste: %s\n", ft_itoa(n));
 	return (0);
